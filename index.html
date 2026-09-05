@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Mostafa &amp; Hala — دعوة زفاف</title>
+  <meta name="description"
+    content="دعوة زفاف مصطفى وهالة — الجمعة 11/12/2026 في نادي أحمد عرابي للقوات المسلحة بالزقازيق">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Preload Hero Artwork -->
+  <link rel="preload" href="assets/hero.webp" as="image" type="image/webp">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Background Ambience for Desktop/Tablet frames -->
+  <div class="ambient-backdrop" aria-hidden="true"></div>
+
+  <!-- Main Mobile-First Experience Container -->
+  <div class="invitation-app">
+
+    <!-- Wedding Background Audio (loops continuously) -->
+    <audio id="weddingAudio" loop preload="auto">
+      <source src="assets/audio/audio.mpeg" type="audio/mpeg">
+    </audio>
+
+    <!-- Discreet Luxury Audio Toggle Button -->
+    <button type="button" class="music-toggle-btn" id="musicToggleBtn" aria-label="تشغيل أو إيقاف الموسيقى">
+      <span class="music-icon-playing" id="musicIconPlaying" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+      </span>
+      <span class="music-icon-muted" id="musicIconMuted" aria-hidden="true" style="display: none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="1" y1="1" x2="23" y2="23" />
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+      </span>
+    </button>
+
+    <!-- =====================================================
+         OPENING ENVELOPE EXPERIENCE
+         ===================================================== -->
+    <section class="envelope-screen" id="envelopeScreen" aria-label="شاشة فتح الدعوة">
+      <div class="envelope-wrapper">
+
+        <!-- The Envelope Construction -->
+        <div class="envelope" id="weddingEnvelope" role="button" tabindex="0" aria-label="اضغط لفتح ظرف دعوة الزفاف">
+
+          <!-- Back Wall & Inner Silk Lining -->
+          <div class="env-back">
+            <div class="env-lining"></div>
+          </div>
+
+          <!-- Emerging Invitation Card Preview -->
+          <div class="env-card" id="envCard" aria-hidden="true">
+            <div class="env-card-inner">
+              <span class="env-card-monogram"><bdi dir="ltr">M &amp; H</bdi></span>
+              <span class="env-card-date"><bdi dir="ltr">11 / 12 / 2026</bdi></span>
+              <div class="env-card-line"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Pocket / Front Body -->
+          <div class="env-pocket"></div>
+
+          <!-- Left & Right Flaps (folded inward) -->
+          <div class="env-side-left"></div>
+          <div class="env-side-right"></div>
+
+          <!-- Top Foldable Flap -->
+          <div class="env-flap-top" id="envFlapTop">
+            <div class="env-flap-inner"></div>
+          </div>
+
+          <!-- Wax Seal -->
+          <div class="wax-seal" id="waxSeal" aria-hidden="true">
+            <div class="wax-seal-outer"></div>
+            <div class="wax-seal-inner">
+              <span class="seal-monogram"><bdi dir="ltr">M &amp; H</bdi></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Subtle Instruction -->
+        <p class="envelope-hint" id="envelopeHint">
+          <span class="hint-text">اضغط لفتح الدعوة</span>
+          <span class="hint-glow" aria-hidden="true"></span>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MAIN INVITATION PAGES (4 ARTWORKS)
+         ===================================================== -->
+    <main class="invitation-content" id="invitationContent" aria-hidden="true">
+
+      <!-- =====================================================
+           SECTION 1: HERO
+           ===================================================== -->
+      <section class="invitation-page section-hero" id="hero" aria-label="واجهة الدعوة — مصطفى وهالة">
+        <div class="artwork-frame">
+          <img src="assets/hero.webp" alt="خلفية دعوة الزفاف الفاخرة مع ستائر مخملية وأزهار" class="artwork-image"
+            loading="eager" decoding="async">
+        </div>
+
+        <!-- Typography overlay precisely typeset into the central calm void -->
+        <div class="typography-layer hero-typography">
+          <div class="hero-intro reveal-item">
+            <span class="ornament-leaf" aria-hidden="true">❦</span>
+          </div>
+
+          <h1 class="couple-names reveal-item">
+            <bdi dir="ltr">Mostafa &amp; Hala</bdi>
+          </h1>
+
+          <div class="hero-divider reveal-item" aria-hidden="true">
+            <span class="divider-diamond"></span>
+          </div>
+
+          <div class="invitation-phrase reveal-item">
+            <p class="phrase-line-1">بكل الحب والسعادة</p>
+            <p class="phrase-line-2">ندعوكم لمشاركتنا فرحتنا</p>
+          </div>
+
+          <div class="hero-date-group reveal-item">
+            <span class="hero-day">الجمعة</span>
+            <span class="hero-date-separator" aria-hidden="true">·</span>
+            <span class="hero-date-num"><bdi dir="ltr">11/12/2026</bdi></span>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           SECTION 2: COUNTDOWN
+           ===================================================== -->
+      <section class="invitation-page section-countdown" id="countdown" aria-label="العد التنازلي لموعد الزفاف">
+        <div class="artwork-frame">
+          <img src="assets/coutdowen.webp" alt="لوحة فنية للساعة التراثية المزدانة بالورود" class="artwork-image"
+            loading="lazy" decoding="async">
+        </div>
+
+        <!-- Typography overlay placed in the expansive center-negative space -->
+        <div class="typography-layer countdown-typography">
+          <div class="countdown-header reveal-item">
+            <span class="section-badge" aria-hidden="true">❧</span>
+            <h2 class="countdown-title">العد التنازلي لفرحتنا</h2>
+          </div>
+
+          <!-- Live dynamic countdown units without bulky cards -->
+          <div class="countdown-timer reveal-item" id="weddingCountdown" aria-live="polite">
+            <div class="time-col">
+              <span class="time-number" id="cdDays"><bdi dir="ltr">--</bdi></span>
+              <span class="time-label">يوم</span>
+            </div>
+
+            <div class="time-separator" aria-hidden="true">:</div>
+
+            <div class="time-col">
+              <span class="time-number" id="cdHours"><bdi dir="ltr">--</bdi></span>
+              <span class="time-label">ساعة</span>
+            </div>
+
+            <div class="time-separator" aria-hidden="true">:</div>
+
+            <div class="time-col">
+              <span class="time-number" id="cdMinutes"><bdi dir="ltr">--</bdi></span>
+              <span class="time-label">دقيقة</span>
+            </div>
+
+            <div class="time-separator" aria-hidden="true">:</div>
+
+            <div class="time-col">
+              <span class="time-number" id="cdSeconds"><bdi dir="ltr">--</bdi></span>
+              <span class="time-label">ثانية</span>
+            </div>
+          </div>
+
+          <div class="countdown-status reveal-item" id="countdownCompleteMsg" style="display: none;">
+            <p class="status-celebrate">بدأت فرحتنا</p>
+          </div>
+
+          <div class="countdown-decor reveal-item" aria-hidden="true">
+            <span class="decor-dot"></span>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           SECTION 3: VENUE / LOCATION
+           ===================================================== -->
+      <section class="invitation-page section-venue" id="venue" aria-label="مكان وموعد الاحتفال">
+        <div class="artwork-frame">
+          <img src="assets/map.webp" alt="لوحة معمارية فخمة لقصر الاحتفال ومسار الخريطة التراثي" class="artwork-image"
+            loading="lazy" decoding="async">
+        </div>
+
+        <!-- Typography overlay placed in the center calm area below the palace -->
+        <div class="typography-layer venue-typography">
+          <div class="venue-header reveal-item">
+            <h2 class="venue-title">مكان الاحتفال</h2>
+            <div class="venue-title-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="venue-details reveal-item">
+            <p class="venue-hall">القاعة الرئيسية</p>
+            <p class="venue-club">نادي أحمد عرابي للقوات المسلحة</p>
+            <p class="venue-city">بالزقازيق</p>
+          </div>
+
+          <div class="venue-timing reveal-item">
+            <p class="timing-day-date">
+              <span class="day-part">الجمعة</span>
+              <span class="timing-dot" aria-hidden="true">·</span>
+              <span class="date-part"><bdi dir="ltr">11/12/2026</bdi></span>
+            </p>
+            <p class="timing-hour">
+              الساعة <bdi dir="ltr">6:00</bdi> مساءً
+            </p>
+          </div>
+
+          <!-- Discreet Luxury Button linking to exact Google Maps -->
+          <div class="venue-action reveal-item">
+            <a href="https://maps.app.goo.gl/vsWC17oWPHfLUnou6?g_st=iwb" target="_blank" rel="noopener noreferrer"
+              class="luxury-map-btn" aria-label="عرض الموقع على خرائط جوجل — يفتح في نافذة جديدة">
+              <span class="btn-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-8-6.5-8-12a8 8 0 0 1 16 0c0 5.5-8 12-8 12z" />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
+              </span>
+              <span class="btn-text">الموقع على الخريطة</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           SECTION 4: RSVP FORM (Web3Forms)
+           ===================================================== -->
+      <section class="invitation-page section-rsvp" id="rsvp" aria-label="تأكيد الحضور">
+        <div class="artwork-frame">
+          <img src="assets/rsvp.webp" alt="لوحة فنية فاخرة لتأكيد حضور الزفاف" class="artwork-image" loading="lazy"
+            decoding="async">
+        </div>
+
+        <!-- RSVP Form placed precisely in the serene left-center void -->
+        <div class="typography-layer rsvp-typography">
+          <div class="rsvp-content-wrap reveal-item">
+
+            <div class="rsvp-header">
+              <span class="rsvp-badge" aria-hidden="true">❦</span>
+              <h2 class="rsvp-title">تأكيد الحضور</h2>
+              <p class="rsvp-subtitle">يسعدنا ويشرفنا مشاركتكم فرحتنا</p>
+              <div class="rsvp-title-divider" aria-hidden="true"></div>
+            </div>
+
+            <!-- Web3Forms RSVP Form -->
+            <form id="rsvpForm" class="rsvp-form" method="POST">
+              <!-- Web3Forms Access Key: Replace with your actual Web3Forms Access Key -->
+              <input type="hidden" name="access_key" id="web3formsAccessKey" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+              <input type="hidden" name="subject" value="تأكيد حضور زفاف Mostafa & Hala">
+              <input type="hidden" name="from_name" value="دعوة زفاف Mostafa & Hala">
+
+              <!-- Guest Name -->
+              <div class="form-group">
+                <label for="guestName" class="form-label">الاسم الكريم</label>
+                <input type="text" id="guestName" name="name" class="form-input" placeholder="اكتب اسمك الكريم هنا"
+                  required autocomplete="name">
+              </div>
+
+              <!-- Attendance Choice -->
+              <div class="form-group">
+                <label class="form-label">هل ستشاركونا فرحتنا؟</label>
+                <div class="attendance-options" role="radiogroup" aria-label="خيارات الحضور">
+                  <label class="radio-pill">
+                    <input type="radio" name="attendance" value="سأكون في الحضور" checked required>
+                    <span class="pill-custom">
+                      <span class="pill-dot"></span>
+                      <span class="pill-text">سأكون في الحضور</span>
+                    </span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="attendance" value="أعتذر عن الحضور" required>
+                    <span class="pill-custom">
+                      <span class="pill-dot"></span>
+                      <span class="pill-text">أعتذر عن الحضور</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Number of Guests (shown when attending) -->
+              <div class="form-group" id="guestCountGroup">
+                <label for="guestCount" class="form-label">عدد الحاضرين</label>
+                <div class="custom-select-wrapper">
+                  <select id="guestCount" name="guest_count" class="form-select">
+                    <option value="1">شخص واحد</option>
+                    <option value="2">شخصان (2)</option>
+                    <option value="3">3 أشخاص</option>
+                    <option value="4">4 أشخاص</option>
+                  </select>
+                  <span class="custom-select-arrow" aria-hidden="true">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                      <path d="M1 1L5 5L9 1" stroke="#B39255" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-action">
+                <button type="submit" id="rsvpSubmitBtn" class="luxury-submit-btn">
+                  <span class="btn-text">تأكيد الرد</span>
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+              </div>
+
+              <!-- Status Feedback Message -->
+              <div id="rsvpFeedback" class="rsvp-feedback" aria-live="polite" style="display: none;"></div>
+
+            </form>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           SECTION 5: FOOTER / CLOSING MESSAGE
+           ===================================================== -->
+      <section class="invitation-page section-footer" id="footer" aria-label="تنبيه التصوير وخاتمة الدعوة">
+        <div class="artwork-frame">
+          <img src="assets/fotter.webp" alt="لوحة معمارية مطلة على الغروب مع فوانيس وأعمدة ورود" class="artwork-image"
+            loading="lazy" decoding="async">
+        </div>
+
+        <!-- Typography overlay -->
+        <div class="typography-layer footer-typography">
+
+          <!-- Closing message — sits in the upper calm sky area -->
+          <div class="footer-closing-frame reveal-item">
+
+            <div class="footer-motif" aria-hidden="true">
+              <span class="motif-symbol">✧</span>
+            </div>
+
+            <div class="photo-guideline">
+              <p class="guideline-primary">يُمنع التصوير منعاً نهائياً</p>
+              <p class="guideline-secondary">لكي نعيش اللحظة والفرح معاً</p>
+
+              <div class="footer-inner-divider" aria-hidden="true">
+                <span class="inner-dot"></span>
+              </div>
+
+              <p class="photographer-notice">سيكون هناك فوتوغرافر محترف</p>
+              <p class="photographer-details">للصور وللفيديو</p>
+            </div>
+
+            <div class="footer-signature">
+              <div class="signature-line" aria-hidden="true"></div>
+              <p class="signature-names"><bdi dir="ltr">Mostafa &amp; Hala</bdi></p>
+              <p class="signature-year"><bdi dir="ltr">2026</bdi></p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- =====================================================
+         EVENTA CREDITS FOOTER — standalone white background strip
+         ===================================================== -->
+    <footer class="eventa-credits reveal-item" aria-label="تصميم الدعوة">
+      <div class="eventa-credits-inner">
+        <div class="eventa-brand-row">
+          <span class="eventa-made-by">صُنع بواسطة</span>
+          <a href="https://www.facebook.com/eventa.digital/" target="_blank" rel="noopener noreferrer"
+            class="eventa-badge-link" aria-label="زيارة صفحة Eventa">
+            <span class="eventa-badge-icon" aria-hidden="true">✦</span>
+            <span class="eventa-brand-name"><bdi dir="ltr">Eventa</bdi></span>
+          </a>
+        </div>
+
+        <div class="eventa-social-row">
+          <!-- Facebook Page -->
+          <a href="https://www.facebook.com/eventa.digital/" target="_blank" rel="noopener noreferrer"
+            class="eventa-btn eventa-fb" aria-label="صفحة Eventa على فيسبوك">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+            <span>فيسبوك</span>
+          </a>
+
+          <span class="eventa-divider-dot" aria-hidden="true">·</span>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/201282082163" target="_blank" rel="noopener noreferrer" class="eventa-btn eventa-wa"
+            aria-label="تواصل معنا عبر واتساب">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+            <span>واتساب</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Application Logic -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
