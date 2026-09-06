@@ -719,17 +719,11 @@ bdi,
 
 /* Hero Scroll Down Hint Indicator */
 .hero-scroll-hint {
-  position: relative;
-  top: 25%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin-top: clamp(20px, 5vw, 32px);
   z-index: 10;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   text-decoration: none;
   cursor: pointer;
   padding: 6px 18px 7px;
@@ -1791,7 +1785,7 @@ bdi,
   }
 
   .hero-scroll-hint {
-    bottom: 2.5%;
+    margin-top: 14px;
     padding: 4px 14px 5px;
   }
 }
