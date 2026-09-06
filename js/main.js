@@ -70,6 +70,10 @@
     setTimeout(function () {
       if (envelopeScreen) {
         envelopeScreen.classList.add('opened');
+        // Detach envelope overlay from render tree to free GPU memory for smooth scrolling
+        setTimeout(function () {
+          envelopeScreen.style.display = 'none';
+        }, 1000);
       }
       if (invitationContent) {
         invitationContent.setAttribute('aria-hidden', 'false');
@@ -188,8 +192,8 @@
       },
       {
         root: null,
-        rootMargin: '0px 0px -40px 0px',
-        threshold: 0.15
+        rootMargin: '80px 0px 80px 0px',
+        threshold: 0.02
       }
     );
 
