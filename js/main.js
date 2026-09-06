@@ -122,6 +122,18 @@
     envelopeHint.addEventListener('click', openEnvelope);
   }
 
+  // Hero Scroll Hint Smooth Scroll
+  const heroScrollHint = document.getElementById('heroScrollHint');
+  if (heroScrollHint) {
+    heroScrollHint.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetSection = document.getElementById('countdown');
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
   /* ==========================================================================
      2. DYNAMIC LIVE COUNTDOWN (Cairo Time UTC+2)
      Target: 11 December 2026 at 6:00 PM (18:00:00 Cairo time)
