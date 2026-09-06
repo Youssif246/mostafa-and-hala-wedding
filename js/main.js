@@ -83,7 +83,7 @@
       }
       // Trigger Hero reveal
       triggerInitialHeroReveal();
-    }, 1300);
+    }, 2000);
   }
 
   // Music toggle button interaction (pause / play)

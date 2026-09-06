@@ -232,7 +232,7 @@ bdi,
     0 5px 15px rgba(125, 95, 56, 0.08);
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s ease;
   outline: none;
-  transform-style: preserve-3d;
+  perspective: 900px;
 }
 
 .envelope:hover,
@@ -270,16 +270,16 @@ bdi,
   right: 15px;
   bottom: 8px;
   height: 180px;
-  background: #FFFFFF;
-  border-radius: 3px;
+  background: #FFFDF9;
+  border-radius: 4px;
   box-shadow: 0 2px 10px rgba(74, 46, 53, 0.1);
-  border: 1px solid rgba(197, 165, 104, 0.3);
+  border: 1px solid rgba(197, 165, 104, 0.4);
   z-index: 2;
-  transition: transform 1s cubic-bezier(0.3, 0, 0.2, 1), opacity 0.8s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 14px;
+  box-sizing: border-box;
 }
 
 .env-card-inner {
@@ -287,29 +287,45 @@ bdi,
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 12px 8px;
+  border: 1px solid rgba(197, 165, 104, 0.3);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
 }
 
-.env-card-monogram {
+.env-card-ornament {
+  font-size: 1rem;
+  color: var(--color-gold-shimmer);
+  line-height: 1;
+}
+
+.env-card-names {
   font-family: var(--font-english-names);
-  font-size: 1.4rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--color-primary);
+  line-height: 1.2;
 }
 
 .env-card-line {
   width: 32px;
   height: 1px;
-  background: var(--color-gold-shimmer);
+  background: linear-gradient(90deg, transparent, var(--color-gold-shimmer), transparent);
   margin: 2px 0;
 }
 
 .env-card-date {
   font-family: var(--font-english-names);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   color: var(--color-secondary);
+  font-weight: 500;
 }
 
 /* Front Pocket & Side Folds */
@@ -361,7 +377,6 @@ bdi,
   border-width: 115px 150px 0 150px;
   border-color: #F8F3EC transparent transparent transparent;
   transform-origin: top center;
-  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.3s ease;
   z-index: 5;
   filter: drop-shadow(0 4px 6px rgba(74, 46, 53, 0.1));
 }
@@ -430,26 +445,61 @@ bdi,
 
 /* Opening Animation Sequence States */
 .envelope.opening .env-flap-top {
-  transform: rotateX(180deg);
-  z-index: 1;
-  transition-delay: 0.1s;
+  animation: openFlap 0.75s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes openFlap {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 5;
+  }
+
+  49% {
+    transform: rotateX(90deg);
+    z-index: 5;
+  }
+
+  50% {
+    z-index: 1;
+  }
+
+  100% {
+    transform: rotateX(180deg);
+    z-index: 1;
+  }
 }
 
 .envelope.opening .env-flap-inner {
   opacity: 1;
-  transition-delay: 0.3s;
+  transition: opacity 0.35s ease 0.25s;
 }
 
 .envelope.opening .wax-seal {
   opacity: 0;
-  transform: translate(-50%, -70%) scale(0.8);
+  transform: translate(-50%, -50%) scale(0.5);
   pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 .envelope.opening .env-card {
-  transform: translateY(-90px);
-  box-shadow: 0 12px 25px rgba(74, 46, 53, 0.18);
-  transition-delay: 0.45s;
+  animation: slideCardUp 0.9s 0.38s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slideCardUp {
+  0% {
+    transform: translateY(0);
+    z-index: 2;
+  }
+
+  1% {
+    z-index: 3;
+  }
+
+  100% {
+    transform: translateY(-120px);
+    box-shadow: 0 16px 36px rgba(74, 46, 53, 0.22);
+    z-index: 3;
+  }
 }
 
 /* Subtle Hint Message */
